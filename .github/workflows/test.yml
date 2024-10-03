@@ -1,0 +1,16 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  hello_world_job:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install correct Bundler version
+        run: echo "Hello, self hosted runner!"
